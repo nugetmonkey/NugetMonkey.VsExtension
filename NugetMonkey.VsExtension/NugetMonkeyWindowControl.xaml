@@ -1,0 +1,38 @@
+﻿<UserControl    x:Class="NugetMonkeyWindowControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NugetMonkeyVsExtension" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"  >
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="28" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="50" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Search:"/>
+            <TextBox  Grid.Row="0" Grid.Column="1"  x:Name="txtSearch" Height="23" TextWrapping="Wrap" Text=""/>
+            <Button Grid.Row="0" Grid.Column="2" Content="Search" Click="btnSearch_Click"  x:Name="btnSearch"  />
+            <DataGrid ItemsSource="{Binding}" AutoGenerateColumns="True" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" Grid.RowSpan="2" Name="grdSearchResults" >
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn Header="Image" Width="SizeToCells" IsReadOnly="True">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Image Source="{Binding Image}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Grid.Row="3" Grid.Column="2" Content="Install"    />
+            <Button Grid.Row="3" Grid.Column="0" Content="Uninstall"/>
+        </Grid>
+</UserControl>

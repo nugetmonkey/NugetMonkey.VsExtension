@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="NugetMonkeyVsExtension.SearchGridUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:NugetMonkeyVsExtension"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="28" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="21*" />
+            <ColumnDefinition Width="13*"/>
+            <ColumnDefinition Width="160*"/>
+            <ColumnDefinition Width="50" />
+        </Grid.ColumnDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="Search:"/>
+        <TextBox  Grid.Row="0" Grid.Column="1"  x:Name="txtSearch" Height="23" TextWrapping="Wrap" Text="" Grid.ColumnSpan="3" />
+        <Button Grid.Row="0" Grid.Column="4" Content="Search" Click="btnSearch_Click"  x:Name="btnSearch"  />
+
+        <DataGrid ItemsSource="{Binding}" AutoGenerateColumns="True" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="1" Name="grdSearchResults" ScrollViewer.CanContentScroll="True" 
+      ScrollViewer.VerticalScrollBarVisibility="Auto"
+      ScrollViewer.HorizontalScrollBarVisibility="Auto"  CurrentCellChanged="grdSearchResults_CurrentCellChanged"  />
+
+        <Button Grid.Row="3" x:Name="btnInstall" Grid.Column="4" Content="Install" Click="btnInstall_Click"    />
+        <Button x:Name="btnUpdate" Grid.Row="3" Grid.Column="4" Content="Update" Click="btnUpdate_Click"    />
+        <Button x:Name="btnRefresh" Grid.Row="3" Grid.Column="0" Content="Refresh" Click="btnRefresh_Click"    />
+        <Button Grid.Row="3" Grid.Column="4" Content="Uninstall"  x:Name="btnUnistall"  Click="btnUninstall_Click"/>
+    </Grid>
+</UserControl>

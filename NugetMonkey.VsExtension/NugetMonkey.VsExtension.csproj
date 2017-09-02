@@ -53,9 +53,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AdditionalDeps.cs" />
+    <Compile Include="DependencyDetailsControl.xaml.cs">
+      <DependentUpon>DependencyDetailsControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DependencyUtil.cs" />
+    <Compile Include="NugetMonkeyControl_Orig.xaml.cs">
+      <DependentUpon>NugetMonkeyControl_Orig.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SearchGridUserControl.xaml.cs">
+      <DependentUpon>SearchGridUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="NugetMonkeyWindowCommand.cs" />
     <Compile Include="NugetMonkeyWindowPackage.cs" />
-    <Compile Include="HttpClientRequestHandler.cs" />
+    <Compile Include="MavenCentralUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="docs.cs" />
     <Compile Include="NugetMonkey.cs" />
@@ -63,7 +73,8 @@
     <Compile Include="NugetMonkeyControl.xaml.cs">
       <DependentUpon>NugetMonkeyControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Utils.cs" />
+    <Compile Include="SearchMode.cs" />
+    <Compile Include="VSUtils.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -87,6 +98,18 @@
     <Content Include="stylesheet.css" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="DependencyDetailsControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="NugetMonkeyControl_Orig.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SearchGridUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="NugetMonkeyControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

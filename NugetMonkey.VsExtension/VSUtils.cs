@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NugetMonkey.VsExtension
 {
-    public class Utils
+    public class VSUtils
     {
         private static EnvDTE80.DTE2 GetDTE2()
         {

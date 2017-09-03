@@ -18,10 +18,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NugetMonkeyVsExtension
+namespace NugetMonkey.VsExtension
 {
     /// <summary>
-    /// Interaction logic for UserControl1.xaml
+    /// Interaction logic for NugetMonkeyControl.xaml
     /// </summary>
     public partial class NugetMonkeyControl : UserControl
     {

@@ -16,7 +16,7 @@ using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 using Microsoft.Win32;
 
-namespace NugetMonkeyVsExtension
+namespace NugetMonkey.VsExtension
 {
     /// <summary>
     /// This is the class that implements the package exposed by this assembly.
@@ -41,7 +41,7 @@ namespace NugetMonkeyVsExtension
     [ProvideToolWindow(typeof(NugetMonkeyControl), Style = VsDockStyle.MDI)]
     [Guid(NugetMonkeyPackage.PackageGuidString)]
     [SuppressMessage("StyleCop.CSharp.DocumentationRules", "SA1650:ElementDocumentationMustBeSpelledCorrectly", Justification = "pkgdef, VS and vsixmanifest are valid VS terms")]
-    [ProvideToolWindow(typeof(NugetMonkey))]
+    [ProvideToolWindow(typeof(NugetMonkeyToolWindow))]
     public sealed class NugetMonkeyPackage : Package
     {
         /// <summary>

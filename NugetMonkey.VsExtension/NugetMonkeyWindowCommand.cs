@@ -10,7 +10,7 @@ using System.Globalization;
 using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 
-namespace NugetMonkeyVsExtension
+namespace NugetMonkey.VsExtension
 {
     /// <summary>
     /// Command handler

@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-using NugetMonkeyVsExtension;
+using NugetMonkey.VsExtension;
 using System;
 using System.Collections;
 using System.Collections.Generic;

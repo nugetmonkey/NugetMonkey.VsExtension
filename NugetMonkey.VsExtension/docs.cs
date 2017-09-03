@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NugetMonkeyVsExtension
+namespace NugetMonkey.VsExtension
 {
     public class Params
     {

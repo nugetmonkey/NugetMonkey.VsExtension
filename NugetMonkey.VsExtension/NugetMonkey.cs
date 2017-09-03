@@ -4,7 +4,7 @@
 // </copyright>
 //------------------------------------------------------------------------------
 
-namespace NugetMonkeyVsExtension
+namespace NugetMonkey.VsExtension
 {
     using System;
     using System.Runtime.InteropServices;
@@ -22,12 +22,12 @@ namespace NugetMonkeyVsExtension
     /// </para>
     /// </remarks>
     [Guid("34da3539-0940-4e87-8f97-be7909a5d8d6")]
-    public class NugetMonkey : ToolWindowPane
+    public class NugetMonkeyToolWindow : ToolWindowPane
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="NugetMonkey"/> class.
+        /// Initializes a new instance of the <see cref="NugetMonkeyToolWindow"/> class.
         /// </summary>
-        public NugetMonkey() : base(null)
+        public NugetMonkeyToolWindow() : base(null)
         {
             this.Caption = "NugetMonkey";
 

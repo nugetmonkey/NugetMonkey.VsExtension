@@ -19,12 +19,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace NugetMonkeyVsExtension
+namespace NugetMonkey.VsExtension
 {
-    public class SelectionEventArgs : EventArgs
-    {
-        public List<Doc> Selection { get; set; }
-    }
     /// <summary>
     /// Interaction logic for UserControl1.xaml
     /// </summary>
